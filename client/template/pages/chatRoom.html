@@ -1,0 +1,30 @@
+<template name="chatRoom">
+	{{> heading}}
+	<div class="wrapper">
+		<div class="chat-room" id="chat-box">
+			{{#each messages}}
+				<div id="chat-message">
+					<p>
+						<li><strong>{{sender}}:</strong> {{message}}</li>
+						<li><span id="time">{{timestamp}}</span></li>
+						<div id="clear"></div>
+					</p>
+				</div>
+			{{/each}}
+		</div>
+		<!-- <div id="clear"></div> -->
+	</div>
+	<div class="footer">
+	  <div class="message">
+			<textarea id="msg" placeholder="Enter message here"></textarea>
+		</div>
+		<div class="send">
+			<div>
+				<label id="character">200</label>
+			</div>
+			<div>
+				<input type="submit" id="send" value="Send"/>
+			</div>
+		</div>
+	</div>
+</template>

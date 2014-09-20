@@ -1,0 +1,11 @@
+<template name="links">
+	<div>
+		{{#each links}}
+			<a href="{{href}}">{{name}}</a>
+		{{else}}
+			{{#each errors}}
+				<span id="{{id}}">{{message}}</span>
+			{{/each}}
+		{{/each}}
+	</div>
+</template>

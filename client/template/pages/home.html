@@ -1,0 +1,14 @@
+<template name="home">
+	<div>
+		{{#if currentUser}}
+			Welcome Kapatid na {{currentUser.profile.name}}, kamusta ka na?
+			{{> links}}
+		{{else}}
+			{{#if loggingIn}}
+			    Logging in ...
+			{{else}}
+				Sorry you are not logged.
+			{{/if}}
+		{{/if}}
+	</div>
+</template>

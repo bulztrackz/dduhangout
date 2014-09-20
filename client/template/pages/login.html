@@ -1,0 +1,22 @@
+<template name="login">
+	<form action="/login" method="post" id="loginForm">
+		<input type="text" id="username" placeholder="Username"/>
+		<input type="password" id="password" placeholder="Password">
+		<input type="submit" id="login" value="Log In" />
+	</form>
+
+	{{#each links}}
+		<p>Not yet a member? <a href="{{pathFor href}}">{{name}}</a></p>
+	{{else}}
+		{{#each errors}}
+			<span id="{{id}}">{{message}}</span>
+		{{/each}}
+	{{/each}}
+<!-- 
+	<br />
+	Test accounts: <br />
+	Username & Password: rommel<br />
+	Username & Password: winner<br />
+	Username & Password: joever<br />
+	Username & Password: marj<br /> -->
+</template>
